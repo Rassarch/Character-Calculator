@@ -1,0 +1,205 @@
+/* General Styling */
+body {
+    font-family: 'SF Pro Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#dark-mode-toggle {
+    border: none;
+    font-size: 18px;
+    background: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Bento Box Styling */
+.bento-box {
+    border: 1px solid #ccc; /* Border untuk kotak */
+    border-radius: 8px; /* Sudut melengkung untuk kotak */
+    padding: 15px; /* Jarak antara konten dan border */
+    margin-bottom: 15px; /* Jarak antara kotak */
+    text-align: center; /* Teks di tengah */
+    background-color: #fff; /* Latar belakang kotak */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bayangan kotak */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bento-box h4 {
+    margin-bottom: 10px; /* Jarak antara judul dan angka */
+    font-size: 1.25rem; /* Ukuran font judul */
+}
+
+.bento-box p {
+    margin: 0; /* Hilangkan margin default pada paragraf */
+    font-size: 1.5rem; /* Ukuran font angka */
+    font-weight: bold; /* Berat font untuk angka */
+}
+
+.bento-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bento-top {
+    flex: 1;
+}
+
+.bento-divider {
+    border-top: 1px solid #ccc; /* Garis tipis pemisah */
+    margin: 8px 0;
+}
+
+.bento-bottom {
+    flex: 1;
+}
+
+/* Styling untuk textarea */
+textarea {
+    width: 100%; /* Lebar penuh dari kolom */
+    height: 150px; /* Tinggi textarea */
+    padding: 10px; /* Jarak di dalam textarea */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 8px; /* Sudut melengkung */
+    font-size: 1rem; /* Ukuran font */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bayangan textarea */
+}
+
+/* Dark Mode Styles */
+body[data-bs-theme="dark"] {
+    background-color: #1d232a;
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] .navbar {
+    background-color: #1d232a;
+    color: #a6adbb;
+    border-bottom: 1px solid rgba(166, 173, 187, 0.1); /* Garis bawah untuk navbar */
+}
+
+body[data-bs-theme="dark"] .navbar .navbar-brand h1 {
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] .btn {
+    color: #a6adbb;
+    background-color: #1d232a;
+    border-color: #1d232a;
+}
+
+body[data-bs-theme="dark"] .btn:hover {
+    color: #a6adbb;
+    background-color: #1d232a;
+    border-color: #1d232a;
+}
+
+body[data-bs-theme="dark"] #dark-mode-toggle {
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] #dark-mode-toggle i {
+    display: none;
+}
+
+body[data-bs-theme="dark"] #dark-mode-toggle i.bi-brightness-high {
+    display: none;
+}
+
+body[data-bs-theme="dark"] #dark-mode-toggle i.bi-moon {
+    display: inline;
+}
+
+body[data-bs-theme="dark"] .offcanvas {
+    background-color: #1d232a;
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] .offcanvas-header {
+    border-bottom: 1px solid #1d232a;
+}
+
+body[data-bs-theme="dark"] .offcanvas .btn-close {
+    filter: invert(1);
+}
+
+body[data-bs-theme="dark"] .offcanvas .dropdown-menu {
+    background-color: #1d232a;
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] .offcanvas .dropdown-menu .dropdown-item {
+    color: #a6adbb;
+}
+
+body[data-bs-theme="dark"] .offcanvas .dropdown-menu .dropdown-item:hover {
+    background-color: #3b5871;
+    color: #a6adbb;
+}
+
+/* Bento Box Styling in Dark Mode */
+body[data-bs-theme="dark"] .bento-box {
+    background-color: #1d232a; /* Latar belakang gelap untuk dark mode */
+    color: #a6adbb; /* Teks berwarna putih untuk dark mode */
+    border: 1px solid rgba(166, 173, 187, 0.1) /* Border kotak dalam mode gelap */
+}
+
+body[data-bs-theme="dark"] .bento-box h4 {
+    color: #a6adbb; /* Warna judul di dark mode */
+}
+
+body[data-bs-theme="dark"] .bento-box p {
+    color: #a6adbb; /* Warna angka di dark mode */
+}
+
+body[data-bs-theme="dark"] .bento-divider {
+    border-top: 1px solid rgba(166, 173, 187, 0.1) /* Garis pemisah dalam mode gelap */
+}
+
+#dark-mode-toggle i {
+    font-size: 20px; /* Ukuran ikon, sesuaikan jika diperlukan */
+}
+
+/* Ikon default untuk light mode */
+#dark-mode-toggle i.bi-moon {
+    display: inline; /* Ditampilkan di light mode */
+}
+
+#dark-mode-toggle i.bi-brightness-high {
+    display: none; /* Disembunyikan di light mode */
+}
+
+/* Ikon di dark mode */
+body[data-bs-theme="dark"] #dark-mode-toggle i.bi-moon {
+    display: none; /* Disembunyikan di dark mode */
+}
+
+body[data-bs-theme="dark"] #dark-mode-toggle i.bi-brightness-high {
+    display: inline; /* Ditampilkan di dark mode */
+}
+
+[data-bs-theme="dark"] textarea {
+    background-color: #1d232a; /* Warna latar belakang mode gelap */
+    color: #a6adbb; /* Warna teks mode gelap */
+    border: 1px solid rgba(166, 173, 187, 0.1)  /* Warna batas mode gelap */
+}
+
+[data-bs-theme="dark"] textarea:focus {
+    background-color: #1d232a; /* Warna latar belakang saat fokus mode gelap */
+    border-color: 1px solid rgba(166, 173, 187, 0.1) ; /* Warna batas saat fokus mode gelap */
+}
+
+[data-bs-theme="dark"] textarea::placeholder {
+    color: #a6adbb; /* Warna teks placeholder mode gelap */
+}
+
